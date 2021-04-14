@@ -183,7 +183,7 @@ const Header = (props) => {
 								onClick={() => handleButtonClick('/services')}>
 								SERVICES
 							</Button>
-							<Button variant='contained' color='primary' size='large'>
+							<Button variant='contained' color='secondary' size='large'>
 								<CallIcon style={{ fontSize: 30 }} /> 0803476222
 							</Button>
 						</div>

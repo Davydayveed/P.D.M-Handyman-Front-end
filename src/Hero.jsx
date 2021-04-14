@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+// import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-// import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+// import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
 	hero: {
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 
 	hammer: {
-		maxWidth: 370,
+		maxWidth: 270,
 		// marginRignt: '880px',
 	},
 }));
@@ -36,30 +36,42 @@ const Hero = () => {
 	const classes = useStyles();
 
 	return (
-		<Grid container>
-			<Grid item xs={12} md={12}>
-				<Box className={classes.hero} boxShadow={2} md={6}>
-					<Typography variant='h2'>
-						Dedicated to quality handyman work. Looking for a Professional
-						HANDYMAN? Get the best Handyman service here
-					</Typography>
-					{/* <Button variant='contained' color='primary' size='large'>
-						Request a Quote
-					</Button> */}
-					<img
-						className={classes.hammer}
-						src='/images/hammer.svg'
-						alt='hammer'
-					/>
-				</Box>
-			</Grid>
-			<Grid item>
-				<Paper>WHY FIX IT YOURSELF LEAVE IT TO THE PROS</Paper>
-			</Grid>
-			<Grid item>
-				<Paper>2</Paper>
+		<Grid className={classes.hero} boxShadow={3}>
+			<Grid container>
+				<Grid item xs={12} md={6}>
+					<Grid>
+						<Typography variant='h3'>
+							Dedicated to quality handyman work.
+						</Typography>
+						<Typography variant='subtitle1'>
+							Are you Looking for a Professional HANDYMAN? Get the best Handyman
+							service here.
+						</Typography>
+						<Button variant='contained' color='secondary' size='large'>
+							Request a Quote
+						</Button>
+					</Grid>
+				</Grid>
+				<Grid item xs={12} md={6}>
+					<Grid>
+						<img
+							className={classes.hammer}
+							src='/images/hammer.svg'
+							alt='hammer'
+						/>
+					</Grid>
+				</Grid>
 			</Grid>
 		</Grid>
+
+		// 	</Grid>
+		// 	<Grid item>
+		// 		<Paper>WHY FIX IT YOURSELF LEAVE IT TO THE PROS</Paper>
+		// 	</Grid>
+		// 	<Grid item>
+		// 		<Paper>2</Paper>
+		// 	</Grid>
+		// </Grid>
 
 		// <Grid container direction='center' md={12} spacing={2}>
 		// 	<Grid item>
