@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-// import Box from '@material-ui/core/Box';
+import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 // import Paper from '@material-ui/core/Paper';
@@ -26,9 +26,13 @@ const useStyles = makeStyles((theme) => ({
 		},
 	},
 
+	mainText: {
+		marginLeft: '250px',
+	},
+
 	hammer: {
-		maxWidth: 270,
-		// marginRignt: '880px',
+		maxWidth: 300,
+		marginLeft: '150px',
 	},
 }));
 
@@ -39,7 +43,7 @@ const Hero = () => {
 		<Grid className={classes.hero} boxShadow={3}>
 			<Grid container>
 				<Grid item xs={12} md={6}>
-					<Grid>
+					<Box className={classes.mainText}>
 						<Typography variant='h3'>
 							Dedicated to quality handyman work.
 						</Typography>
@@ -50,50 +54,19 @@ const Hero = () => {
 						<Button variant='contained' color='secondary' size='large'>
 							Request a Quote
 						</Button>
-					</Grid>
+					</Box>
 				</Grid>
 				<Grid item xs={12} md={6}>
-					<Grid>
+					<Box>
 						<img
 							className={classes.hammer}
 							src='/images/hammer.svg'
 							alt='hammer'
 						/>
-					</Grid>
+					</Box>
 				</Grid>
 			</Grid>
 		</Grid>
-
-		// 	</Grid>
-		// 	<Grid item>
-		// 		<Paper>WHY FIX IT YOURSELF LEAVE IT TO THE PROS</Paper>
-		// 	</Grid>
-		// 	<Grid item>
-		// 		<Paper>2</Paper>
-		// 	</Grid>
-		// </Grid>
-
-		// <Grid container direction='center' md={12} spacing={2}>
-		// 	<Grid item>
-		// 		<Box className={classes.hero} >
-		// 			<Typography variant='h4' color='primary' align='left'>
-		// 				Perfection is always in our mind.
-		// 			</Typography>
-		// 			{/*   */}
-		// 		</Box>
-		// 	</Grid>
-		// 	<Grid item></Grid>
-		// </Grid>
-		// <Box className={classes.hero} boxShadow={1}>
-		// 	<Box>
-		// 		<p>Perfection is always in our mind. NO JOB IS TOO BIG </p>
-		// 		<Button variant='contained' color='primary' size='large'>
-		// 			Request a Quote
-		// 		</Button>
-
-		// 		{/* <img src="/images/hammer.svg" alt="hammer" /> */}
-		// 	</Box>
-		// </Box>
 	);
 };
 
