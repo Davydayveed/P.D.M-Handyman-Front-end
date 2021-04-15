@@ -22,10 +22,14 @@ export default function App() {
 					exact
 					path='/contact'
 					render={(props) => <Contact {...props} />}
-				 />
+				/>
 				<Route exact path='/about' render={(props) => <About {...props} />} />
-				<Route exact path='/services' render={(props) => <Services {...props} />} />
+				<Route
+					exact
+					path='/services'
+					render={(props) => <Services {...props} />}
+				/>
 			</Switch>
 		</div>
-	); 
+	);
 }

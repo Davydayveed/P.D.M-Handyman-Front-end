@@ -5,6 +5,14 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 // import Paper from '@material-ui/core/Paper';
+import {
+	createMuiTheme,
+	responsiveFontSizes,
+	ThemeProvider,
+} from '@material-ui/core/styles';
+
+let theme = createMuiTheme();
+theme = responsiveFontSizes(theme);
 
 const useStyles = makeStyles((theme) => ({
 	hero: {
@@ -27,12 +35,13 @@ const useStyles = makeStyles((theme) => ({
 	},
 
 	mainText: {
-		marginLeft: '250px',
+		marginLeft: '240px',
 	},
 
 	hammer: {
-		maxWidth: 300,
-		marginLeft: '150px',
+		marginTop: 50,
+		maxWidth: 340,
+		marginLeft: '170px',
 	},
 }));
 
@@ -41,16 +50,18 @@ const Hero = () => {
 
 	return (
 		<Grid className={classes.hero} boxShadow={3}>
-			<Grid container>
+			<Grid container alignItems='center'>
 				<Grid item xs={12} md={6}>
 					<Box className={classes.mainText}>
-						<Typography variant='h3'>
-							Dedicated to quality handyman work.
-						</Typography>
-						<Typography variant='subtitle1'>
-							Are you Looking for a Professional HANDYMAN? Get the best Handyman
-							service here.
-						</Typography>
+						<ThemeProvider theme={theme}>
+							<Typography variant='h3'>
+								Dedicated to quality handyman work.
+							</Typography>
+							<Typography variant='subtitle1'>
+								Are you Looking for a Professional HANDYMAN? Get the best
+								Handyman service here.
+							</Typography>
+						</ThemeProvider>
 						<Button variant='contained' color='secondary' size='large'>
 							Request a Quote
 						</Button>

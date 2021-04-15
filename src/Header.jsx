@@ -193,8 +193,6 @@ const Header = (props) => {
 			<br />
 			<br />
 			<br />
-			<br />
-			<br />
 		</div>
 	);
 };
